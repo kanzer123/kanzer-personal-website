@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谭润州的个人主页</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* 蓝粉渐变 */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            position: sticky;
+            top: 60px;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin: 20px 0;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .skills div, .projects div {
+            flex: 1 1 30%;
+            margin: 10px;
+            padding: 20px;
+            background: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skills div:hover, .projects div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .download-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .download-button:hover {
+            background: #0056b3;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+            list-style-type: none;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #007BFF;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 20px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: #fff;
+            border: 4px solid #007BFF;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.right::after {
+            left: -13px;
+        }
+        @media screen and (max-width: 768px) {
+            .timeline-item.left, .timeline-item.right {
+                width: 100%;
+                left: 0;
+            }
+            .timeline-item.right::after {
+                left: 50%;
+                margin-left: -13px;
+            }
+        }
+        .personal-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .personal-info div {
+            flex: 1 1 45%;
+            margin: 10px;
+            padding: 10px;
+            background: #f0f0f0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .personal-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>谭润州的个人主页</h1>
+        <p>船舶与海洋工程专业学生 | 技术爱好者 | 创新者</p>
+    </header>
+    <nav>
+        <a href="#about">关于我</a>
+        <a href="#personal-info">个人信息</a>
+        <a href="#projects">项目</a>
+        <a href="#skills">技能</a>
+        <a href="#photos">照片</a>
+        <a href="#contact">联系</a>
+    </nav>
+    <div class="container">
+        <div id="about" class="section">
+            <h2>关于我</h2>
+            <p>欢迎来到我的个人主页！我叫谭润州，在读于广东海洋大学的船舶与海洋工程专业。我热衷于工程和技术，拥有扎实的专业知识和丰富的实践经验，并且希望能够将我的技能应用于创新和有影响力的项目中，推动技术的进步和应用。</p>
+        </div>
+        <div id="personal-info" class="section">
+            <h2>个人信息</h2>
+            <div class="personal-info">
+                <div>
+                    <p><strong>性别：</strong>男</p>
+                    <p><strong>年龄：</strong>18</p>
+                </div>
+                <div>
+                    <p><strong>户籍：</strong>湖南</p>
+                    <p><strong>现所在地：</strong>广东湛江</p>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="section">
+            <h2>项目</h2>
+            <ul class="timeline">
+                <li class="timeline-item left">
+                    <h3>无人驾驶船舶导航系统设计</h3>
+                    <p>参与了无人驾驶船舶导航系统的设计与开发，负责系统架构和算法优化，提高了导航精度和安全性。</p>
+                </li>
+                <li class="timeline-item right">
+                    <h3>海洋环境监测系统</h3>
+                    <p>开发了基于物联网的海洋环境监测系统，实现了对海洋数据的实时采集和分析，为环境保护提供了数据支持。</p>
+                </li>
+                <li class="timeline-item left">
+                    <h3>船舶结构优化设计</h3>
+                    <p>参与了多艘船舶的结构优化设计，应用先进的计算方法和工具，提高了船舶的强度和稳定性，降低了建造成本。</p>
+                </li>
+            </ul>
+        </div>
+        <div id="skills" class="section">
+            <h2>技能</h2>
+            <div class="skills">
+                <div>
+                    <h3>编程语言</h3>
+                    <p>熟悉C/C++、Python、Java等编程语言，具备良好的编程能力和代码优化经验。</p>
+                </div>
+                <div>
+                    <h3>工程软件</h3>
+                    <p>熟练使用AutoCAD、SolidWorks、ANSYS等工程设计与仿真软件，具有丰富的项目实践经验。</p>
+                </div>
+                <div>
+                    <h3>项目管理</h3>
+                    <p>具备较强的项目管理能力，能够有效地规划和组织项目，确保按时完成任务。</p>
+                </div>
+            </div>
+        </div>
+        <div id="photos" class="section">
+            <h2>照片</h2>
+            <img src="https://github.com/kanzer123/kanzer-personal-website/blob/main/images/00633-3820895343-man,1boy,handsome,black%20hair,short%20hair,.png?raw=true" alt="谭润州的照片" class="photo">
+        </div>
+        <div id="contact" class="section">
+            <h2>联系</h2>
+            <p>邮箱：trz13703027981@qq.com</p>
+            <p>电话：+86 15815928725</p>
+            <p>bilibili：<a href="https://space.bilibili.com/283804782" target="_blank">space.bilibili.com/283804782</a></p>
+        </div>
+        <a href="https://pan.baidu.com/s/1sCMpc6-X3ZLfUNSp9v7aiQ?pwd=c9q0" download class="download-button">下载我的简历</a>
+    </div>
+</body>
+</html>
